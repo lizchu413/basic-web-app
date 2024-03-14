@@ -22,5 +22,12 @@ export default function QueryProcessor(query: string): string {
     return ((first + second).toString());
   }
 
+  if (query.toLowerCase().includes("multiplied")) {
+    var arr = query.split("?").join(" ").split(" ");
+    var first = parseInt(arr[2]);
+    var second = parseInt(arr[5]);
+    return ((first * second).toString());
+  }
+
   return "";
 }
