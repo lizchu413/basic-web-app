@@ -19,7 +19,8 @@ export default function QueryProcessor(query: string): string {
     var arr = query.split("?").join(" ").split(" ");
     var first = parseInt(arr[2]);
     var second = parseInt(arr[4]);
-    return ((first + second).toString());
+    var third = parseInt(arr[6]);
+    return ((first + second + third).toString());
   }
 
   if (query.toLowerCase().includes("multiplied")) {
