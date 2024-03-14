@@ -29,5 +29,12 @@ export default function QueryProcessor(query: string): string {
     return ((first * second).toString());
   }
 
+  if (query.toLowerCase().includes("largest")) {
+    var arr = query.split("?").join(":").split(":").join(",").split(",").join(" ").split(" ");
+    var first = parseInt(arr[9]);
+    var second = parseInt(arr[11]);
+    var third = parseInt(arr[13]);
+    return ((Math.max(first, Math.max(second, third))).toString());
+  }
   return "";
 }
