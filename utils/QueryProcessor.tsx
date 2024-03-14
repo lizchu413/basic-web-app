@@ -38,11 +38,11 @@ export default function QueryProcessor(query: string): string {
     return ((Math.max(first, Math.max(second, third))).toString());
   }
 
-  var is_square = function (n) {
+  var is_square = function (n : number) {
     return n > 0 && Math.sqrt(n) % 1 === 0;
 };
 
-    var is_cube = function (n) {
+    var is_cube = function (n : number) {
         return Math.cbrt(n) % 1 === 0;
     };
 
